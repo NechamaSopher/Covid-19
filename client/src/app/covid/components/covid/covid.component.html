@@ -1,0 +1,17 @@
+<section class="covid">
+  <section class="tabs">
+    <div *ngFor="let tab of tabs"
+      class="tab"
+      [class.selected]="selectedTab === tab.key"
+      (click)="selectTab(tab.key)">{{tab.value}}
+    </div>
+  </section>
+
+  <section class="content">
+    <ng-container [ngSwitch]="selectedTab">
+      <app-country-info *ngSwitchCase="'NEW_CASES'"></app-country-info>
+
+      <app-top-total-cases *ngSwitchCase="'TOP_TOTALS'"></app-top-total-cases>
+    </ng-container>
+  </section>
+</section>

@@ -1,0 +1,49 @@
+.covid {
+  width: 100%;
+  height: 100%;
+
+  .tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 12%;
+    border-bottom: 1px solid;
+
+    .tab {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 10%;
+      height: 100%;
+      font-size: 1.3rem;
+      font-weight: 600;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+
+      &.selected {
+        color: #363B4F;
+
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 30%;
+          bottom: 0;
+          left: 40%;
+          background: #363B4F;
+          box-shadow: -2px 0px 4px rgb(0 0 0 / 32%);
+        }
+      }
+    }
+  }
+
+  .content {
+    width: 100%;
+    height: 80%;
+  }
+}

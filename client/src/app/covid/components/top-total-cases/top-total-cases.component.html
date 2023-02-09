@@ -1,0 +1,17 @@
+<section class="top-total">
+  <button *ngIf="dataSource?.length" (click)="downloadFile()"> Download CSV</button>
+
+  <table>
+    <tr>
+      <th>Country Name</th>
+      <th>Total Cases</th>
+      <th>Total Deaths</th>
+    </tr>
+    <tr *ngFor="let item of dataSource">
+      <td>{{item.countryName}}</td>
+      <td>{{item.totalCases}}</td>
+      <td>{{item.totalDeaths}}</td>
+    </tr>
+  </table>
+
+</section>
