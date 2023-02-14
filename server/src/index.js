@@ -15,6 +15,6 @@ const app = new Koa();
 app.use(middleWares);
 app.use(routes);
 
-app.listen(process.env.PORT || 4000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log(`Started on port ${process.env.PORT || 3000}`);
 });
